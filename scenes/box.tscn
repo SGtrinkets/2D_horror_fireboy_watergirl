@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7qc4cdp3ikkb"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_on5l8"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_on5l8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3inec"]
+
+[node name="box" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 5
+physics_material_override = SubResource("PhysicsMaterial_on5l8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(20, 20)
+texture = SubResource("CanvasTexture_on5l8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3inec")
