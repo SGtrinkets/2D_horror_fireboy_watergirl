@@ -1,6 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b7qc4cdp3ikkb"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_on5l8"]
+friction = 0.25
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_on5l8"]
 
@@ -9,6 +10,7 @@
 [node name="box" type="RigidBody2D"]
 collision_layer = 4
 collision_mask = 5
+mass = 8.0
 physics_material_override = SubResource("PhysicsMaterial_on5l8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

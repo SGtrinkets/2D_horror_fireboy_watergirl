@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=3 uid="uid://c238dft7n6ne5"]
+
+[ext_resource type="Script" uid="uid://drafhvco4ak8b" path="res://scripts/menu.gd" id="1_l6cm7"]
+
+[node name="main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l6cm7")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -178.0
+offset_top = -40.0
+offset_right = -79.0
+offset_bottom = 114.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+
+[node name="start" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="select_level" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Select Level"
+
+[node name="options" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Options"
+
+[node name="quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Leave"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/select_level" to="." method="_on_select_level_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
